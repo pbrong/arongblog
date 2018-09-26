@@ -2,9 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="headerFragment(title,active)">
     <meta charset="utf-8"/>
-    <link rel="icon" href=" " type="image/x-icon" />
-    <link rel="shortcut icon" href=" " type="image/x-icon" />
-    <title><th:block th:text="${title!=null?title:'博客后台'}+'- My Blog'"></th:block></title>
+    <title><th:block th:text="${title!=null?title:'博客后台'}+'- arongblog'"></th:block></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="Coderthemes" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -30,7 +28,7 @@
                 </a>
             </div>
             <div class="pull-left" style="padding-left: 10px;">
-                <span style="font-size: 28px; color: #2f353f; line-height: 50px;">My Blog</span>
+                <span style="font-size: 28px; color: #2f353f; line-height: 50px;">arongblog</span>
             </div>
         </div>
     </div>
@@ -50,7 +48,7 @@
                            aria-expanded="true"><img th:src="${commons.gravatar(session.login_user.email)}" alt="user-img"
                                                      class="img-circle"/> </a>
                         <ul class="dropdown-menu">
-                            <li><a th:href="@{${commons.site_url()}}" target="_blank"><i class="fa fa-eye"
+                            <li><a th:href="@{|/|}" target="_blank"><i class="fa fa-eye"
                                                                                          aria-hidden="true"></i>
                                 查看网站</a></li>
                             <li><a th:href="@{/admin/profile}"><i class="fa fa-sun-o"></i> 个人设置</a></li>

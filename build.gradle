@@ -38,6 +38,9 @@ configurations {
 
 
 dependencies {
+	//热部署
+	compile("org.springframework.boot:spring-boot-devtools")
+
 	// https://mvnrepository.com/artifact/com.alibaba/druid
 	compile group: 'com.alibaba', name: 'druid', version: '1.1.11'
 
@@ -81,5 +84,10 @@ sourceSets {
 			srcDirs = ['src/main/java', 'src/main/resources']
 		}
 	}
+}
+
+bootRun {
+//开启页面热加载功能
+	addResources = true
 }
 
