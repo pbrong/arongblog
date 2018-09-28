@@ -39,7 +39,7 @@ CREATE TABLE `t_attach` (
 
 LOCK TABLES `t_attach` WRITE;
 /*!40000 ALTER TABLE `t_attach` DISABLE KEYS */;
-INSERT INTO `t_attach` VALUES (1,'1.jpeg','image','/upload/2017/06/t93vgdj6o8irgo87ds56u0ou0s.jpeg',1,1496816096);
+INSERT INTO `t_attach` VALUES (1,'1.jpeg','img','/upload/2017/06/t93vgdj6o8irgo87ds56u0ou0s.jpeg',1,1496816096);
 /*!40000 ALTER TABLE `t_attach` ENABLE KEYS */;
 UNLOCK TABLES;
 

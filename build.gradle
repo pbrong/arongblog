@@ -36,6 +36,10 @@ configurations {
 	all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
 }
 
+bootRun {
+//开启页面热加载功能
+	addResources = true
+}
 
 dependencies {
 	//热部署
@@ -86,8 +90,5 @@ sourceSets {
 	}
 }
 
-bootRun {
-//开启页面热加载功能
-	addResources = true
-}
+
 
