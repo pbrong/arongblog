@@ -25,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -54,13 +55,24 @@ public class IndexController extends BaseController {
 
     @Resource
     private ISiteService siteService;
+    /*
+    欢迎页
+     */
+    @RequestMapping(value="/")
+    public String welcome(Model model){
+        model.addAttribute("welcomeMessage","Arong Blog");
+        return "themes/default/welcome";
+    }
+
+
+
 
     /**
      * 首页
      *
      * @return
      */
-    @GetMapping(value = {"/", "index"})
+    @GetMapping(value = {"/index"})
     public String index(HttpServletRequest request, @RequestParam(value = "limit", defaultValue = "12") int limit) {
         return this.index(request, 1, limit);
     }
@@ -341,7 +353,7 @@ public class IndexController extends BaseController {
      * @param chits
      */
     @Transactional(rollbackFor = TipException.class)
-    private void updateArticleHit(Integer cid, Integer chits) {
+   public  void updateArticleHit(Integer cid, Integer chits) {
         Integer hits = cache.hget("article", "hits");
         if (chits == null) {
             chits = 0;

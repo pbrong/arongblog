@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+
+    <div style="text-align: center;margin-outside: 0px;;background-image: url(/user/img/welcome.jpg);height:600px;width:100%">
+        <span  style="font-family:Helvetica;font-size: 80px" ><a style="text-decoration:none" th:href="@{|${#request.getContextPath()}/index|}" th:text="${welcomeMessage}"></a> </span>
+    </div>
+</head>
+<body>
+
+</body>
+</html>
