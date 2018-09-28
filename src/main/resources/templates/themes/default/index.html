@@ -2,6 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <div th:replace="themes/default/header::header(null,null)"></div>
 <body>
+
+<div style="margin-bottom: 0px">
+    <img height="550px" width="1400px" th:src="@{|${#request.getContextPath()}/user/img/tm-home-img.jpg|}">
+</div>
+
 <div class="main-content index-page clearfix">
     <div class="post-lists">
         <div class="post-lists-body">
