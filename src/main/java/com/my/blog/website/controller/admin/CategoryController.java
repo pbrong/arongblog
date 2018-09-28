@@ -29,19 +29,26 @@ public class CategoryController extends BaseController {
     @Resource
     private IMetaService metasService;
 
+
     /**
-     * 分类页
-     * @param request
-     * @return
+     * 首页查询文章分类
+     *
      */
-    @GetMapping(value = "")
-    public String index(HttpServletRequest request) {
-        List<MetaDto> categories = metasService.getMetaList(Types.CATEGORY.getType(), null, WebConst.MAX_POSTS);
-        List<MetaDto> tags = metasService.getMetaList(Types.TAG.getType(),  null, WebConst.MAX_POSTS);
-        request.setAttribute("categories", categories);
-        request.setAttribute("tags", tags);
-        return "admin/category";
-    }
+
+        /**
+         * 分类页
+         * @param request
+         * @return
+         */
+        @GetMapping(value = "")
+        public String index(HttpServletRequest request) {
+            List<MetaDto> categories = metasService.getMetaList(Types.CATEGORY.getType(), null, WebConst.MAX_POSTS);
+            List<MetaDto> tags = metasService.getMetaList(Types.TAG.getType(),  null, WebConst.MAX_POSTS);
+            request.setAttribute("categories", categories);
+            request.setAttribute("tags", tags);
+            return "admin/category";
+        }
+
 
     @PostMapping(value = "save")
     @ResponseBody

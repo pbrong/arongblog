@@ -65,8 +65,6 @@ public class IndexController extends BaseController {
     }
 
 
-
-
     /**
      * 首页
      *

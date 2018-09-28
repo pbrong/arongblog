@@ -36,6 +36,9 @@ public class MetaVo implements Serializable {
      */
     private Integer sort;
 
+
+
+
     private Integer parent;
 
     private static final long serialVersionUID = 1L;

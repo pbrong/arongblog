@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <tr th:each="category, categoryStat : ${categorys}">
+        <td th:text="${categoryStat.index}"></td>
+        <td th:text="${category.mid}"></td>
+        <td th:text="${category.name}"></td>
+        <td th:text="${category.description}"></td>
+        <td th:text="${category.sort}"></td>
+        <td th:text="${category.count}"></td></tr>
+
+</head>
+<body>
+
+</body>
+</html>

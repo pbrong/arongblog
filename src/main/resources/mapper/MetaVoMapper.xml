@@ -11,6 +11,7 @@
     <result column="parent" jdbcType="INTEGER" property="parent" />
   </resultMap>
 
+
   <resultMap id="MetaDto" type="com.my.blog.website.dto.MetaDto" extends="BaseResultMap">
     <result column="count" property="count" jdbcType="INTEGER"/>
   </resultMap>
@@ -266,5 +267,21 @@
     SELECT count(0)
     FROM t_contents a LEFT JOIN t_relationships b ON a.cid = b.cid
     WHERE b.mid = #{value} AND a.status = 'publish' AND a.type = 'post';
+  </select>
+
+  <select id="selectAll" resultType="com.my.blog.website.modal.Vo.CategoryVo">
+   SELECT
+    meta.`mid` MID,
+    meta.`name` NAME,
+   COUNT(*) COUNT,
+    meta.`description` description,
+    meta.`sort` sort
+  FROM
+   t_metas meta
+    LEFT OUTER JOIN t_relationships rel
+    ON meta.`mid` = rel.`mid`
+WHERE meta.`type` = 'category'
+GROUP BY meta.`mid`
+ORDER BY COUNT(*) DESC
   </select>
 </mapper>

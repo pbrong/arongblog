@@ -1,14 +1,14 @@
 package com.my.blog.website.dao;
 
 import com.my.blog.website.dto.MetaDto;
+import com.my.blog.website.modal.Vo.CategoryVo;
 import com.my.blog.website.modal.Vo.MetaVo;
 import com.my.blog.website.modal.Vo.MetaVoExample;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
-
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
 @Component
 public interface MetaVoMapper {
@@ -39,4 +39,6 @@ public interface MetaVoMapper {
     MetaDto selectDtoByNameAndType(@Param("name") String name, @Param("type") String type);
 
     Integer countWithSql(Integer mid);
+
+    List<CategoryVo> selectAll();
 }
