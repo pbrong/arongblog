@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 可选的Bootstrap主题文件（一般不使用） -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+    <title>test</title>
+    <style>
+    .col-md-1 {
+        border:1px solid blue;
+    }
+    .col-md-4 {
+        border:1px solid blue;
+    }
+    .col-md-8{
+            border:1px solid blue;
+    }
+
+    </style>
+</head>
+<body>
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
+    </button>
+
+    <div class="row">
+        <div class="col-md-8 hidden-xs col-md-offset-2">.col-xs-12 .col-md-8</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+
+    <p><code>&lt;header&gt;</code> 作为内联元素被包围。</p>
+    <p>如果需要把代码显示为一个独立的块元素，请使用 &lt;pre&gt; 标签：</p>
+    <pre>
+    &lt;article&gt;
+        &lt;h1&gt;Article Heading&lt;/h1&gt;
+    &lt;/article&gt;
+</pre>
+
+    <hr>
+    <table class="table table-striped  table-hover  ">
+        <thead>
+            <tr>
+                <th ><span class="fa fa-cog">首页</span></th>
+                <th><span class="fa fa-cog">导航栏</span></th>
+                <th><span class="fa fa-cog">目录</span></th>
+                <th><span class="fa fa-cog">其他</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="1" onclick="showId(this.id)">
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr id="2" onclick="showId(this.id)">
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr id="3" onclick="showId(this.id)">
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <script>
+           function showId(id){
+               alert(id);
+               $("#"+id).css("background-color","red");
+           }
+
+        </script>
+
+    </table>
+
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
