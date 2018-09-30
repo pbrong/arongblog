@@ -33,7 +33,7 @@
         </a>
         <div class="navbar-menu">
             <a th:href="${commons.site_url('/archives')}">时间轴</a>
-            <a th:href="${commons.site_url('/showCategory?desc=0')}">文章分类</a>
+            <a th:href="${commons.site_url('/index/showCategorys?desc=0')}">文章分类</a>
             <a th:href="${commons.site_url('/about')}">关于</a>
         </div>
         <div class="navbar-search" onclick="">
@@ -49,7 +49,7 @@
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
                 <li><a th:href="${commons.site_url('/archives')}">时间轴</a></li>
-                <li><a th:href="${commons.site_url('/links')}">文章分类</a></li>
+                <li><a th:href="${commons.site_url('/index/showCategorys?desc=0')}">文章分类</a></li>
                 <li><a th:href="${commons.site_url('/about')}">关于</a></li>
             </ul>
         </div>

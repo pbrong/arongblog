@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="themes/default/header::header(null,null)"></div>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,92 +16,43 @@
 
 
 
-    <title>test</title>
+    <title>文章分类</title>
     <style>
-    .col-md-1 {
-        border:1px solid blue;
-    }
-    .col-md-4 {
-        border:1px solid blue;
-    }
-    .col-md-8{
-            border:1px solid blue;
-    }
-
+        div{
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
+    <img   height="450px" width="100%" th:src="@{|${#request.getContextPath()/user/img/tm-home-img.jpg}|}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2" style="height: 600px">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>分类序号</th>
+                            <th>分类名称</th>
+                            <th>分类描述</th>
+                            <th>文章数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <span th:each="category,cateStat:${categorys}">
+                        <tr th:id="${cateStat.mid}" onclick="alert(this.id)">
+                            <td th:text="${cateStat.count}">1</td>
+                            <td th:text="${category.name}">java</td>
+                            <td th:text="${category.description}">java 相关</td>
+                            <td th:text="${category.count}">2</td>
+                        </tr>
+                    </span>
+                    </tbody>
 
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-        <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
-    </button>
+                </table>
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="col-md-8 hidden-xs col-md-offset-2">.col-xs-12 .col-md-8</div>
     </div>
-
-    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-    </div>
-
-    <!-- Columns are always 50% wide, on mobile and desktop -->
-    <div class="row">
-        <div class="col-xs-6">.col-xs-6</div>
-        <div class="col-xs-6">.col-xs-6</div>
-    </div>
-
-
-    <p><code>&lt;header&gt;</code> 作为内联元素被包围。</p>
-    <p>如果需要把代码显示为一个独立的块元素，请使用 &lt;pre&gt; 标签：</p>
-    <pre>
-    &lt;article&gt;
-        &lt;h1&gt;Article Heading&lt;/h1&gt;
-    &lt;/article&gt;
-</pre>
-
-    <hr>
-    <table class="table table-striped  table-hover  ">
-        <thead>
-            <tr>
-                <th ><span class="fa fa-cog">首页</span></th>
-                <th><span class="fa fa-cog">导航栏</span></th>
-                <th><span class="fa fa-cog">目录</span></th>
-                <th><span class="fa fa-cog">其他</span></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr id="1" onclick="showId(this.id)">
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr id="2" onclick="showId(this.id)">
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-            </tr>
-            <tr id="3" onclick="showId(this.id)">
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-            </tr>
-        </tbody>
-        <script>
-           function showId(id){
-               alert(id);
-               $("#"+id).css("background-color","red");
-           }
-
-        </script>
-
-    </table>
-
 
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
