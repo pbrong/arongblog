@@ -18,47 +18,44 @@
 
     <title>文章分类</title>
     <style>
-        div{
+        /*div{
             border: 1px solid red;
-        }
+        }*/
     </style>
 </head>
 <body>
-<img   height="450px" width="100%" th:src="@{|${#request.getContextPath()}/user/img/tm-home-img.jpg|}">
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2" style="height: 600px">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th width="15%"> 分类序号 </th>
-                    <th width="15%"> 分类名称 </th>
-                    <th  >  分类描述 </th>
-                    <th width="15%"> 文章数量 </th>
-                </tr>
-                </thead>
-                <tbody>
-                <span th:each="category,cateStat:${categorys}">
-                        <tr th:id="${category.mid}" onclick="alert(this.id)">
-                            <td th:text="${cateStat.count}">1</td>
-                            <td th:text="${category.name}">java</td>
-                            <td th:text="${category.description}">java 相关</td>
-                            <td th:text="${category.count}">2</td>
-                        </tr>
-                    </span>
-                </tbody>
 
-            </table>
+
+    <div class="main-content archive-page clearfix">
+        <div class="categorys-item">
+                <div class="categorys-title" >文章分类</div>
+                <div class="post-lists">
+                    <div class="post-lists-body">
+                        <th:block th:each="category,cateStat:${categorys}">
+                            <div class="post-list-item">
+                                <div class="post-list-item-container">
+                                    <div class="item-label">
+                                        <div class="item-title">
+                                            <a th:href="@{|${#request.getContextPath()}/tag/${category.name}|}" ><span th:text="${category.name}"  ></span></a><br>
+                                        </div>
+                                        <div style="color:#98a6ad" th:text="${category.description}">
+
+                                        </div>
+                                        <div class="item-meta clearfix">
+                                            <div class="item-meta-date">文章数量: <th:block th:text="${category.count}"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
         </div>
     </div>
 
-</div>
 
 
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+<div th:replace="themes/default/footer::footer"></div>
 </html>
