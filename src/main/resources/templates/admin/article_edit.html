@@ -110,7 +110,7 @@
                             <div class="text-right">
                                 <a class="btn btn-default waves-effect waves-light" th:href="@{/admin/article}">返回列表</a>
                                 <button type="button" class="btn btn-primary waves-effect waves-light" onclick="subArticle('publish');">
-                                    发布文章
+                                    保存文章
                                 </button>
                                 <button type="button" class="btn btn-warning waves-effect waves-light" onclick="subArticle('draft');">
                                     存为草稿
@@ -124,6 +124,7 @@
         </div>
     </div>
 </div>
+<div th:replace="admin/footer :: footer"></div>
 
 <script th:src="@{/admin/plugins/tagsinput/jquery.tagsinput.min.js}"></script>
 <script th:src="@{/admin/plugins/jquery-multi-select/jquery.quicksearch.js}"></script>

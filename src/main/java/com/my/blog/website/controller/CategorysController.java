@@ -23,7 +23,7 @@ public class CategorysController {
             List<CategoryVo> categorys = categoryService.showCategory(desc);
             System.out.println(categorys);
             model.addAttribute("categorys", categorys);
-            return "themes/default/categoryTest";
+            return "themes/default/category-show";
         }else{
             throw  new RuntimeException();
         }
