@@ -5,7 +5,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--&lt;!&ndash; 新 Bootstrap 核心 CSS 文件 &ndash;&gt;
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
@@ -42,7 +44,7 @@
 
                                         </div>
                                         <div class="item-meta clearfix">
-                                            <div class="item-meta-date">文章数量: <th:block th:text="${category.count}"/></div>
+                                            <div class="item-meta-date">文章数量: <span class="badge"><th:block th:text="${category.count}"/></span></div>
                                         </div>
                                     </div>
                                 </div>

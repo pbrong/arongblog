@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 可选的Bootstrap主题文件（一般不使用） -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <title>BootStrap</title>
+</head>
+<body>
+<div class="container">
+    <form   id="userForm" role="form">
+        <div class="form-group">
+            <label  for="username" >姓名</label>
+            <input   type="text" class="form-control" id="username"
+                  name="username" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" placeholder="请输入密码" class="form-control" disabled>
+        </div>
+        <div class="form-group">
+            <label>描述</label>
+            <textarea class="form-control" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" >选项1
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" >选项2
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" >选项3
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="radio">1
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="radio" style="cursor: help">2
+            </label>
+            <label  >选择列表</label>
+            <select name="select" class="form-control">
+                <option value="1">1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <label  >可多选的选择列表</label>
+            <select multiple class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button onclick="f()" type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;">
+                <span class="glyphicon glyphicon-user"></span> 提交
+            </button>
+            <button class="btn">
+                <span class="glyphicon glyphicon-tag" style="color: rgb(114, 140, 206); text-shadow: rgb(0, 0, 0) 0.5px 0.5px 0px;"> Tag</span>
+            </button>
+
+            <div class="progress progress-striped active">
+                <div id="processbar" class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 1%;">
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    setTimeout("process()",1000);
+
+     function process(){
+        for(var i = 0;i <= 100;i ++){
+            $("#processbar").css("width",i+"%");
+        }
+     }
+</script>
+</body>
+</html>

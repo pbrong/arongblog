@@ -1628,3 +1628,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'tas
 2018-10-01 12:32:42.592 [http-nio-8888-exec-10] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=null
 2018-10-01 12:34:27.734 [http-nio-8888-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getArchives method
 2018-10-01 12:34:27.789 [http-nio-8888-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getArchives method
+2018-10-01 17:34:32.139 [http-nio-8888-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2018-10-01 17:34:32.622 [http-nio-8888-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2018-10-01 17:34:43.786 [http-nio-8888-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getArchives method
+2018-10-01 17:34:43.831 [http-nio-8888-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getArchives method
