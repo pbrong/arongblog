@@ -25,12 +25,6 @@ fork from [My-Blog](https://github.com/ZHENFENG13/My-Blog) , 并且在原先的�
  [新增]文章分类：
  ![](img/categorys.png)
  
- 友链：
- ![](img/links.png)
- 
- 关于：
- ![](img/about.png)
- 
  搜索：
  ![](img/search.png)
  
@@ -56,9 +50,6 @@ fork from [My-Blog](https://github.com/ZHENFENG13/My-Blog) , 并且在原先的�
  
  文件管理：
  ![](img/admin-upload.png)
-  
- 友链管理：
- ![](img/admin-links.png)
    
  系统设置：
  ![](img/admin-setting.png)
