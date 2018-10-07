@@ -2,6 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <div th:replace="themes/default/header::header(title='文章归档',keywords=null)"></div>
 <body>
+<div style="border: 0px solid red;height: 550px;width: 100%">
+    <img width="100%" height="100%" th:src="@{|${#request.getContextPath()}/user/img/tm-home-img2.jpg|}"  >
+</div>
+
 <div class="main-content archive-page clearfix">
     <div class="categorys-item">
         <th:block th:each="archive : ${archives}">
