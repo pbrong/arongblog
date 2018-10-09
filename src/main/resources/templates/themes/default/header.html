@@ -33,7 +33,7 @@
         </a>
         <div class="navbar-menu">
             <a th:href="${commons.site_url('/archives')}">时间轴</a>
-            <a th:href="${commons.site_url('/index/showCategorys?desc=0')}">文章分类</a>
+            <a th:href="@{/index/showCategorys(desc=0,currentPage=1)}">文章分类</a>
             <a th:href="${commons.site_url('/about')}">关于</a>
         </div>
         <div class="navbar-search" onclick="">

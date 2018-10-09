@@ -17,12 +17,13 @@ public class CategorysController {
 
 
     @RequestMapping(value="/index/showCategorys")
-    public String showCategory(String desc, Model model) {
+    public String showCategory(String desc,int currentPage, Model model) {
         if (desc != null && StringUtils.isNotBlank(desc)) {
             //desc不为空
-            List<CategoryVo> categorys = categoryService.showCategory(desc);
-            System.out.println(categorys);
+            List<CategoryVo> categorys = categoryService.showCategory(desc,currentPage);
             model.addAttribute("categorys", categorys);
+            model.addAttribute("currentPage",currentPage);
+            model.addAttribute("cateNum",categorys.size());
             return "themes/default/category-show";
         }else{
             throw  new RuntimeException();

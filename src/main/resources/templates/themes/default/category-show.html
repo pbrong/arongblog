@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-<div style="border: 0px solid red;height: 550px;width: 100%">
+<div style="border:0px solid red;height: 550px;width: 100%">
     <img width="100%" height="100%" th:src="@{|${#request.getContextPath()}/user/img/tm-home-img3.jpg|}"  >
 </div>
 
@@ -46,16 +46,47 @@
 
                                         </div>
                                         <div class="item-meta clearfix">
-                                            <div class="item-meta-date">文章数量: <span class="badge"><th:block th:text="${category.count}"/></span></div>
+                                            <div class="item-meta-date">文章数量: <span style="background-color:#6fa3ef;: #5bc0de" class="badge"><th:block th:text="${category.count}"/></span></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </th:block>
                     </div>
                 </div>
         </div>
+
+
+        <ul class="pager" >
+            <li ><a class="btn" id="prePage" th:href="@{/index/showCategorys(desc=0,currentPage=${currentPage-1})}">上一页</a></li>
+            <li><a class="btn" id="lastPage" th:href="@{/index/showCategorys(desc=0,currentPage=${currentPage+1})}">下一页</a></li>
+        </ul>
+        <script>
+            $(function(){
+                //获取categorys集合中的目录数
+                var cateNum = "[[${cateNum}]]";
+                //js直接取文本值
+                var page = "[[${currentPage}]]";
+                if(page <= 1){
+                    //让其不可点击前一页
+                    $("#prePage").addClass("btn disabled");
+                }
+
+                if(cateNum < 9){
+                    //已是最后一页，不可点击后一页
+                    $("#lastPage").addClass("btn disabled");
+                }
+
+            })
+        </script>
+
     </div>
+
+
+
+
 
 
 

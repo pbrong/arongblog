@@ -1,5 +1,6 @@
 package com.my.blog.website.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.my.blog.website.dao.MetaVoMapper;
 import com.my.blog.website.modal.Vo.CategoryVo;
 import com.my.blog.website.service.CategoryService;
@@ -16,9 +17,10 @@ public class CategoryServiceImp implements CategoryService {
     //首页 查询文章目录
     @Transactional
     @Override
-    public List<CategoryVo> showCategory(String desc) {
+    public List<CategoryVo> showCategory(String desc, int currentPage) {
         if(desc.equals("0")){
             //查询全部
+            PageHelper.startPage(currentPage,9);
             List<CategoryVo> categoryVos = metaVoMapper.selectAll();
             return categoryVos;
         }else{
