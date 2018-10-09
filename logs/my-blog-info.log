@@ -1718,3 +1718,11 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'tas
 2018-10-07 11:01:36.745 [http-nio-8888-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
 2018-10-07 11:01:36.768 [http-nio-8888-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
 2018-10-07 11:02:48.403 [http-nio-8888-exec-9] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "bootstrap.min.css"
+2018-10-07 15:53:09.320 [http-nio-8888-exec-10] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2018-10-07 15:53:09.339 [http-nio-8888-exec-10] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2018-10-07 15:54:28.134 [http-nio-8888-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getArchives method
+2018-10-07 15:54:28.201 [http-nio-8888-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getArchives method
+2018-10-07 15:54:33.962 [http-nio-8888-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getArchives method
+2018-10-07 15:54:33.990 [http-nio-8888-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getArchives method
+2018-10-07 15:54:56.123 [http-nio-8888-exec-9] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2018-10-07 15:54:56.145 [http-nio-8888-exec-9] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
